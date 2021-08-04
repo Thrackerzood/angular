@@ -1,0 +1,18 @@
+<button (click)="isVisible=!isVisible">Toggle</button>
+<p
+appStyle="red" fontWeight = 'bold'
+*ifNot="!isVisible"
+>authorization works!</p>
+<p>{{ e | number:'1.1-1' }}</p>
+<p>{{ date | date: 'yyyy.dd.MMMM HH:mm:ss'}}</p>
+<p>{{ float | currency }}</p>
+<p>{{ 10 | mult:2}}</p>
+<p>{{ 10 | mult:3}}</p>
+<p>{{ 10 | mult:4}}</p>
+<p>{{ p | async }}</p>
+<p>{{ myDate | async | date: 'dd.MM.yyyy HH:mm:ss' }}</p>
+<div>
+   <h2>App Counter : {{ appCounterService.counter }}</h2>
+   <button (click)="appCounterService.increase()">+</button>
+   <button (click)="appCounterService.decrease()">-</button>
+</div>
