@@ -1,5 +1,10 @@
-<app-nav></app-nav>
-<app-registration (onAdd)="updateInfo($event)"></app-registration>
-<app-authorization
-   
-></app-authorization>
+<nav-component></nav-component>
+
+<my-component>
+   <h3 #childComponent> {{ child }} </h3>
+</my-component>
+
+<button (click)="increment()">| + |</button>
+<button (click)="decrement()">| - |</button>
+
+<router-outlet></router-outlet>

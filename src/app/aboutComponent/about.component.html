@@ -1,0 +1,15 @@
+<button
+[routerLink]="['/about']"
+[queryParams]="{showIds: true}"
+[fragment]="'fragment'"
+>showId routing</button>
+<button
+(click)="showId()"
+>showId programming</button>
+<div *ngFor="let n of PostsService.posts">
+   <strong *ngIf="showIds">(Id: {{ n.id }})</strong>
+   <a [routerLink]="['/about', n.id]">
+      <h1>{{ n.title }}</h1>
+      <p>{{ n.text }}</p>
+   </a>
+</div>

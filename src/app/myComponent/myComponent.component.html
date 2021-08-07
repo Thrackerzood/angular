@@ -1,0 +1,7 @@
+<p #content>{{ name }}</p>
+<p>{{ content.textContent }}</p>
+<input type="text" [(ngModel)]='name'>
+<ng-content></ng-content>
+
+<p>{{ counter }}</p>
+<button (click)="change()">Изменить</button>
